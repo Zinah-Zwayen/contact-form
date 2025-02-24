@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!--BootStrap link-->
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <!--Google Fonts Karla-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <title>Contact form</title>
+
+  
+</head>
+<body>
+<div class="container">
+  <form class="contact-form">
+    <h1>Contact Us</h1>
+    <div class="row">
+      <!--first name --->
+      <div class="col-md-6 mb-3">
+        <label for="validationServer01">First name <span class="star">*</span></label>
+        <input type="text" class="form-control" id="validationServer01" placeholder="" value="" required>
+        <div class="invalid-feedback">
+        This field is required
+        </div>
+      </div>
+      <!--Last name --->
+      <div class="col-md-6 mb-3">
+        <label for="validationServer02">Last name <span class="star">*</span></label>
+        <input type="text" class="form-control" id="validationServer02" placeholder="" value="" required>
+        <div class="invalid-feedback">
+        This field is required
+        </div>
+      </div>
+    </div>
+
+    <!--Email Address --->
+    <div class="row">  
+      <div class="col-md-12 mb-3">
+      <label for="Email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+      <div class="invalid-feedback">
+        Please enter a valid email address
+      </div>
+      </div>
+    </div>
+
+    <!--Option radio buttons-->
+    <div class="row">
+      <label for="validationServer02">Query Type <span class="star">*</span></label>
+      
+      <div class="col-md-6 mb-3">
+        <div class="border rounded p-2 px-4 d-flex align-items-center" id="query-type1">
+          <input class="form-check-input me-2" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">General Enquiry</label>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3 ">
+        <div class="border rounded p-2 px-4 d-flex align-items-center" id="query-type2">
+          <input class="form-check-input me-2" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Support Request</label>
+        </div>
+      </div>
+
+      <!-- Error Message (Initially Hidden)-->
+      <div class="text-danger mt-1" id="radioError" style="display: none;">
+        Please select query type
+      </div>
+
+    </div> 
+    
+    <!-- Message Area -->
+    <div class="mb-3">
+      <label for="validationTextarea" class="form-label">Message <span class="star">*</span></label>
+      <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+      <div class="invalid-feedback" style="display: none;">
+        This field is required.
+      </div>
+    </div>
+
+    <!--Consent Checkbox --->
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+        <label class="form-check-label" for="flexCheckDefault">
+          I consent to being contacted by the team <span class="star">*</span>
+        </label>
+        <div class="invalid-feedback">
+        To submit this form, please consent to being contacted
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-12 mx-auto">
+      <button class="btn mt-3" type="submit" id="btn">Submit</button>
+    </div>
+  </form>
+</div>
+<!---Success Message Shows up When form submitted correctly-->
+<div class="successMessage">
+  <h3><img src="assets/images/icon-success-check.svg" alt="Success"> Message Sent!</h3>
+  <p>Thanks for completing the form. We'll be in touch soon!</p>
+</div>
+  <div class="attribution">
+    Coded by <a href="#">Zinah</a>.
+  </div>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
